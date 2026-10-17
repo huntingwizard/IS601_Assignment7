@@ -42,3 +42,6 @@ jobs:
 
       - name: Build Docker image
         run: docker build -t huntingwizard/qr_codemaker .
+
+      - name: Run container
+        run: sudo docker run -v ./qr_codes:/app/qr_codes huntingwizard/qr_codemaker
